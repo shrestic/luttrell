@@ -1,0 +1,63 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude: [ ios/**, android/**, test/** , .dart_tool/** ]
+  plugins:
+    - dart_code_metrics
+
+  errors:
+    empty_constructor_bodies: error
+    missing_required_param: error
+    always_use_package_imports: error
+    avoid_types_as_parameter_names: error
+    close_sinks: error
+    unnecessary_statements: warning
+    non_constant_identifier_names: warning
+
+linter:
+  rules:
+    camel_case_types: true
+    #    prefer_double_quotes: true
+    avoid_empty_else: true
+    constant_identifier_names: false
+    use_key_in_widget_constructors: false
+
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    cyclomatic-complexity: 20
+    maximum-nesting-level: 5
+    number-of-parameters: 8
+    source-lines-of-code: 50
+    number-of-methods: 10
+  metrics-exclude:
+    - test/**
+    - ios/**
+    - android/**
+  rules:
+    newline-before-return:
+      severity: error
+    no-boolean-literal-compare:
+      severity: style
+    no-empty-block:
+      severity: style
+    #     avoid-returning-widgets:
+    #       severity: none
+    prefer-conditional-expressions:
+      severity: style
+    arguments-ordering:
+      child-last: true
+    avoid-collection-methods-with-unrelated-types:
+      strict: false
+    avoid-nested-conditional-expressions:
+      acceptable-level: 2
+    avoid-unnecessary-conditionals:
+      severity: warning
+    prefer-trailing-comma:
+      severity: style
+
+
+#   severity -> none, style, performance, warning, error.

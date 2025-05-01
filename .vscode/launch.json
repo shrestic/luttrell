@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "DEVELOPMENT",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev"
+            ],
+        },
+        {
+            "name": "STAGE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_stage.dart",
+            "args": [
+                "--flavor",
+                "stage"
+            ],
+        },
+        {
+            "name": "PRODUCTION",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod"
+            ],
+        }
+    ]
+}
