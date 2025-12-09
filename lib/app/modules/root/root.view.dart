@@ -2,7 +2,7 @@ import 'package:context_holder/context_holder.dart';
 import 'package:luttrell/app/modules/authentication/authentication_bloc/authentication_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:luttrell/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart';
 
